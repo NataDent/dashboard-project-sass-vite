@@ -115,3 +115,6 @@ Pages, у гілку `gh-pages`, щоразу, коли оновлюється �
 Цей шаблон створено під [MIT License](LICENSE).
 
 **Thank you and happy coding!** 💻
+
+
+##[Посилання на макет](https://www.figma.com/file/9WoxZ7ct5bDY2p2xbpqjbP/Dashboard-UI-Kit?type=design&node-id=46-1058&mode=design&t=l04MxlOxkUOmgAba-0)

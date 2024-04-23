@@ -6,9 +6,9 @@ import glob from "fast-glob";
 import { fileURLToPath } from "url";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
-export default defineConfig({
+export default defineConfig( {
   plugins: [
-    ViteImageOptimizer({
+    ViteImageOptimizer( {
       png: {
         quality: 86,
       },
@@ -18,12 +18,12 @@ export default defineConfig({
       jpg: {
         quality: 86,
       },
-    }),
+    } ),
     {
-      ...imagemin(["./src/img/**/*.{jpg,png,jpeg}"], {
+      ...imagemin( ["./src/img/**/*.{jpg,png,jpeg}"], {
         destination: "./src/img/webp/",
-        plugins: [imageminWebp({ quality: 86 })],
-      }),
+        plugins: [imageminWebp( { quality: 86 } )],
+      } ),
       apply: "serve",
     },
   ],
@@ -32,11 +32,11 @@ export default defineConfig({
     rollupOptions: {
       input: Object.fromEntries(
         glob
-          .sync(["./*.html", "./pages/**/*.html"])
-          .map((file) => [
-            path.relative(__dirname, file.slice(0, file.length - path.extname(file).length)),
-            fileURLToPath(new URL(file, import.meta.url)),
-          ])
+          .sync( ["./*.html", "./pages/**/*.html"] )
+          .map( ( file ) => [
+            path.relative( __dirname, file.slice( 0, file.length - path.extname( file ).length ) ),
+            fileURLToPath( new URL( file, import.meta.url ) ),
+          ] )
       ),
       // output unminified CSS file
       output: {
@@ -44,4 +44,4 @@ export default defineConfig({
       },
     },
   },
-});
+} );

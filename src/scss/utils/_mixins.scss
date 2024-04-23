@@ -1,12 +1,12 @@
 @use 'sass:map';
 @use 'sass:list';
 
-@use 'vars' as v;
+@use 'variables' as var;
 @use 'functions' as fn;
 
 @mixin mq($bp: sm, $type: min, $is-retina: false) {
-  @if map.has-key(v.$breakpoints, $bp) {
-    $width: map.get(v.$breakpoints, $bp);
+  @if map.has-key(var.$breakpoints, $bp) {
+    $width: map.get(var.$breakpoints, $bp);
 
     @if $type == max {
       $width: $width - 0.02px;
